@@ -21,6 +21,7 @@
             android:textSize="30sp"
             android:fontFamily="sans-serif-smallcaps"
             android:textAlignment="center"
+            android:textColor="@color/design_default_color_error"
             android:layout_marginTop="60dp"/>
 
         <EditText
@@ -28,7 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:autoText="true"
+            android:autofillHints="@string/editText"
             android:contentDescription="@string/editText"
             android:hint="@string/editText"
             android:inputType="text"
@@ -39,8 +40,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="160dp"
+            android:layout_marginStart="160dp"
             android:text="@string/buttonText"/>
+
+        <Switch
+            android:id="@+id/switchElement"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="@string/switchText" />
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/checkboxText"
+            android:gravity="center"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="30dp"
+            android:textOff="@string/toggleButtonTextOFF"
+            android:textOn="@string/toggleButtonTextON" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

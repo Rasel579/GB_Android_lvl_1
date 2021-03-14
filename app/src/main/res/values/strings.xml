@@ -3,4 +3,8 @@
     <string name="mainText">Hello first app on  android</string>
     <string name="editText">Введите Текст</string>
     <string name="buttonText">OK</string>
+    <string name="switchText">Включить</string>
+    <string name="checkboxText">Выбрать</string>
+    <string name="toggleButtonTextON">Включить</string>
+    <string name="toggleButtonTextOFF">Выключить</string>
 </resources>
