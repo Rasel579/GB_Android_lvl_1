@@ -13,24 +13,63 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-148dp">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="256dp"
-            tools:srcCompat="@mipmap/ic_launcher" />
-
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="42dp"
-            android:text="TextView"
-            android:layout_marginTop="@android:dimen/notification_large_icon_height"/>
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:ems="@android:integer/config_longAnimTime"
+            android:layout_height="64dp"
+            android:text="@string/mainText"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_error"
+            android:layout_marginTop="60dp"/>
 
-        <Button
-            android:id="@+id/button2"
+        <EditText
+            android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Button"
-            android:layout_marginTop="@android:dimen/notification_large_icon_height"/>
+            android:layout_marginTop="50dp"
+            android:autofillHints="@string/editText"
+            android:contentDescription="@string/editText"
+            android:hint="@string/editText"
+            android:inputType="text"
+            android:fontFamily="serif"
+            android:textSize="30sp"/>
+
+        <Button
+            android:id="@+id/firstButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/buttonText" />
+
+        <Switch
+            android:id="@+id/switchElement"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="@string/switchText" />
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/checkboxText"
+            android:gravity="center"/>
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginStart="140dp"
+            android:layout_marginTop="30dp"
+            android:textOff="@string/toggleButtonTextOFF"
+            android:textOn="@string/toggleButtonTextON" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

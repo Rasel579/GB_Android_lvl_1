@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Hello_GeekBrains</string>
+    <string name="mainText">Hello first app on  android</string>
+    <string name="editText">Введите Текст</string>
+    <string name="buttonText">Перейти в редактирование профиля</string>
+    <string name="switchText">Включить</string>
+    <string name="checkboxText">Выбрать</string>
+    <string name="toggleButtonTextON">Включить</string>
+    <string name="toggleButtonTextOFF">Выключить</string>
+    <string name="textPersonName">Введите Имя</string>
+    <string name="contentText">Введите Текст</string>
+    <string name="phoneEditText">Введите номер телефона</string>
+    <string name="numberEditText">Введите свой номер</string>
+    <string name="passwordHint">Введите пароль</string>
+    <string name="emailEditText">Введите Ваш Email адрес</string>
+    <string name="backButtonText">Назад</string>
+    <string name="toCalendarText">Перейти в календарь</string>
 </resources>
