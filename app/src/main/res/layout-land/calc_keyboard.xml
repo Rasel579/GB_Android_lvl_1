@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:text="@string/button1"
+                android:textSize="@dimen/textSizeHorizontal" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:text="@string/button2"
+                android:textSize="@dimen/textSizeHorizontal" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:text="@string/button3"
+                android:textSize="@dimen/textSizeHorizontal" />
+
+            <Button
+                android:id="@+id/buttonPlus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:text="@string/buttonPlus"
+                android:textSize="@dimen/textSizeHorizontal" />
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/button4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/button4"/>
+            <Button
+                android:id="@+id/button5"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/button5"/>
+            <Button
+                android:id="@+id/button6"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/button6"/>
+            <Button
+                android:id="@+id/buttonMinus"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/buttonMinus"/>
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/button7"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:onClick="putToEditTextNumber"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/button7"/>
+            <Button
+                android:id="@+id/button8"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/button8"/>
+
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:text="@string/button_9"
+                android:textSize="@dimen/textSizeHorizontal"/>
+
+            <Button
+                android:id="@+id/buttonMultiply"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/buttonMultiply"/>
+        </TableRow>
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <Button
+                android:id="@+id/button0"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/button0"/>
+            <Button
+                android:id="@+id/buttonDivide"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:textSize="@dimen/textSizeHorizontal"
+                android:text="@string/buttonDivide"/>
+
+            <Button
+                android:id="@+id/buttonPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="putToEditTextNumber"
+                android:text="@string/buttonPoint"
+                android:textSize="@dimen/textSizeHorizontal" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/buttonEqual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:layout_marginStart="@dimen/marginStartBtn"
+                android:onClick="getResult"
+                android:text="@string/buttonEqual"
+                android:textSize="@dimen/textSizeHorizontal" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

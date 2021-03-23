@@ -1,11 +1,13 @@
 package com.example.hello_geekbrains;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,17 +17,20 @@ import com.example.hello_geekbrains.bussines_logic.ArithmeticLogic;
 import static com.example.hello_geekbrains.R.id.button1;
 
 public class MainActivity extends AppCompatActivity {
-    EditText editText;
-    ArithmeticLogic arithmeticLogic = new ArithmeticLogic();
-
+    private EditText editText;
+    private final static String KeyArithmeticLogic = "ArithmeticLogic";
+    private ArithmeticLogic arithmeticLogic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        arithmeticLogic = new ArithmeticLogic();
         editText = findViewById(R.id.calculatorEditText);
     }
 
+
+    //Добавляем на экран через determineView в editText введенные пользователем данные
     public void putToEditTextNumber(View view) {
         determineView(view);
         editText.setText(arithmeticLogic.getStringParser());
@@ -34,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     public void getResult(View view) {
         editText.setText(arithmeticLogic.getResult());
     }
-
+    //Определяем тип нажатой кнопки
     private void determineView(View view) {
         switch (view.getId()){
                 case button1:
@@ -85,4 +90,17 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+   //сохраняем состояние
+    @Override
+    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+        outState.putParcelable(KeyArithmeticLogic, arithmeticLogic);
+
+    }
+    //восстонавливаем объект arithmeticLogic через Parcelable
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        arithmeticLogic = savedInstanceState.getParcelable(KeyArithmeticLogic);
+    }
 }
