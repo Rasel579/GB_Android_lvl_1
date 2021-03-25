@@ -2,12 +2,7 @@ package com.example.hello_geekbrains.bussines_logic;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.widget.Button;
-import android.widget.FrameLayout;
 
-import com.example.hello_geekbrains.R;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 
 public class ArithmeticLogic implements Parcelable {
@@ -67,28 +62,47 @@ public class ArithmeticLogic implements Parcelable {
 
     private void calculateResult(ArrayList<String> contentNumberAndArithmeticSigns) {
       contentNumberAndArithmeticSigns.add(stringContainNumber);
-      if(contentNumberAndArithmeticSigns.contains("+") && contentNumberAndArithmeticSigns.size() == 3){
-          result = Float.parseFloat(contentNumberAndArithmeticSigns.get(0)) + Float.parseFloat(contentNumberAndArithmeticSigns.get(2));
-          contentNumberAndArithmeticSigns.clear();
-          contentNumberAndArithmeticSigns.add(String.valueOf(result));
+      if(contentNumberAndArithmeticSigns.contains("+") && contentNumberAndArithmeticSigns.size() == 3 && !contentNumberAndArithmeticSigns.get(0).equals("") && !contentNumberAndArithmeticSigns.get(2).equals("")){
+          result = sum(contentNumberAndArithmeticSigns);
+          setResult(String.valueOf(result));
+
       }
-      if(contentNumberAndArithmeticSigns.contains("-") && contentNumberAndArithmeticSigns.size() == 3){
-          result = Float.parseFloat(contentNumberAndArithmeticSigns.get(0)) - Float.parseFloat(contentNumberAndArithmeticSigns.get(2));
-          contentNumberAndArithmeticSigns.clear();
-          contentNumberAndArithmeticSigns.add(String.valueOf(result));
+      if(contentNumberAndArithmeticSigns.contains("-") && contentNumberAndArithmeticSigns.size() == 3 && !contentNumberAndArithmeticSigns.get(0).equals("") && !contentNumberAndArithmeticSigns.get(2).equals("")){
+          result = difference(contentNumberAndArithmeticSigns);
+          setResult(String.valueOf(result));
       }
 
-      if(contentNumberAndArithmeticSigns.contains("*") && contentNumberAndArithmeticSigns.size() == 3){
-          result =   Float.parseFloat(contentNumberAndArithmeticSigns.get(0)) * Float.parseFloat(contentNumberAndArithmeticSigns.get(2));
-          contentNumberAndArithmeticSigns.clear();
-          contentNumberAndArithmeticSigns.add(String.valueOf(result));
+      if(contentNumberAndArithmeticSigns.contains("*") && contentNumberAndArithmeticSigns.size() == 3 && !contentNumberAndArithmeticSigns.get(0).equals("") && !contentNumberAndArithmeticSigns.get(2).equals("")){
+          result = subtract(contentNumberAndArithmeticSigns);
+          setResult(String.valueOf(result));
       }
 
-      if(contentNumberAndArithmeticSigns.contains("/") && contentNumberAndArithmeticSigns.size() == 3){
-          result = Float.parseFloat(contentNumberAndArithmeticSigns.get(0)) / Float.parseFloat(contentNumberAndArithmeticSigns.get(2));
-          contentNumberAndArithmeticSigns.clear();
-          contentNumberAndArithmeticSigns.add(String.valueOf(result));
+      if(contentNumberAndArithmeticSigns.contains("/") && contentNumberAndArithmeticSigns.size() == 3 && !contentNumberAndArithmeticSigns.get(0).equals("") && !contentNumberAndArithmeticSigns.get(2).equals("")){
+          result = divide(contentNumberAndArithmeticSigns);
+          setResult(String.valueOf(result));
       }
+    }
+
+
+    private float sum(ArrayList<String> contentNumberAndArithmeticSigns) {
+        return Float.parseFloat(contentNumberAndArithmeticSigns.get(0)) + Float.parseFloat(contentNumberAndArithmeticSigns.get(2));
+    }
+
+    private float difference(ArrayList<String> contentNumberAndArithmeticSigns) {
+        return Float.parseFloat(contentNumberAndArithmeticSigns.get(0)) - Float.parseFloat(contentNumberAndArithmeticSigns.get(2));
+    }
+
+    private float subtract(ArrayList<String> contentNumberAndArithmeticSigns) {
+        return Float.parseFloat(contentNumberAndArithmeticSigns.get(0)) * Float.parseFloat(contentNumberAndArithmeticSigns.get(2));
+    }
+
+    private float divide(ArrayList<String> contentNumberAndArithmeticSigns) {
+        return Float.parseFloat(contentNumberAndArithmeticSigns.get(0)) / Float.parseFloat(contentNumberAndArithmeticSigns.get(2));
+    }
+
+    private void setResult(String result) {
+        contentNumberAndArithmeticSigns.clear();
+        contentNumberAndArithmeticSigns.add(String.valueOf(result));
     }
 
     public String getResult(){

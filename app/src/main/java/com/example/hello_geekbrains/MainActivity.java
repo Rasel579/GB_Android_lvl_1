@@ -14,8 +14,6 @@ import android.widget.EditText;
 
 import com.example.hello_geekbrains.bussines_logic.ArithmeticLogic;
 
-import static com.example.hello_geekbrains.R.id.button1;
-
 public class MainActivity extends AppCompatActivity {
     private EditText editText;
     private final static String KeyArithmeticLogic = "ArithmeticLogic";
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     //Определяем тип нажатой кнопки
     private void determineView(View view) {
         switch (view.getId()){
-                case button1:
+                case R.id.button1:
                     arithmeticLogic.setStringParser("1");
                     break;
                 case R.id.button2:
@@ -92,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
    //сохраняем состояние
     @Override
-    public void onSaveInstanceState(@NonNull Bundle outState, @NonNull PersistableBundle outPersistentState) {
-        super.onSaveInstanceState(outState, outPersistentState);
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
         outState.putParcelable(KeyArithmeticLogic, arithmeticLogic);
 
     }
