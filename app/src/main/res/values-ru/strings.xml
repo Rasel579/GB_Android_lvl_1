@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">GeekBrains_Calculator</string>
-    <string name="hintForCalcEditText">Enter your arithmetic example</string>
+    <string name="hintForCalcEditText">Введите пример</string>
     <string name="button1">1</string>
     <string name="button2">2</string>
     <string name="button3">3</string>
@@ -17,5 +18,5 @@
     <string name="buttonDivide">/</string>
     <string name="buttonEqual">=</string>
     <string name="buttonPoint">.</string>
-    <string name="switchTheme">Switch Theme</string>
+    <string name="switchTheme">Переключить Тему</string>
 </resources>
