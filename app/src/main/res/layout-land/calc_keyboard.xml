@@ -17,158 +17,143 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
                 android:text="@string/button1"
-                android:textSize="@dimen/textSizeHorizontal" />
+                style="@style/BtnStyle1"
+                />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
                 android:text="@string/button2"
-                android:textSize="@dimen/textSizeHorizontal" />
+                style="@style/BtnStyle1"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
                 android:text="@string/button3"
-                android:textSize="@dimen/textSizeHorizontal" />
+                style="@style/BtnStyle1" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonPlus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
                 android:text="@string/buttonPlus"
-                android:textSize="@dimen/textSizeHorizontal" />
+                style="@style/BtnStyle1" />
         </TableRow>
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content">
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button4"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/button4"/>
-            <Button
+                android:text="@string/button4"
+                style="@style/BtnStyle1"/>
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button5"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/button5"/>
+                android:text="@string/button5"
+                style="@style/BtnStyle1"/>
             <Button
                 android:id="@+id/button6"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/button6"/>
-            <Button
+                android:text="@string/button6"
+                style="@style/BtnStyle1"/>
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMinus"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/buttonMinus"/>
+                android:text="@string/buttonMinus"
+                style="@style/BtnStyle1"/>
         </TableRow>
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content">
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button7"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:onClick="putToEditTextNumber"
-                android:layout_marginStart="@dimen/marginStartBtn"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/button7"/>
-            <Button
+                android:text="@string/button7"
+                style="@style/BtnStyle1"/>
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button8"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/button8"/>
+                android:text="@string/button8"
+                style="@style/BtnStyle1"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
                 android:text="@string/button_9"
-                android:textSize="@dimen/textSizeHorizontal"/>
+                style="@style/BtnStyle1"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonMultiply"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/buttonMultiply"/>
+                android:text="@string/buttonMultiply"
+                style="@style/BtnStyle1"/>
         </TableRow>
         <TableRow
             android:layout_height="wrap_content"
             android:layout_width="wrap_content">
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/button0"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/button0"/>
-            <Button
+                android:text="@string/button0"
+                style="@style/BtnStyle1"/>
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonDivide"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
-                android:textSize="@dimen/textSizeHorizontal"
-                android:text="@string/buttonDivide"/>
+                android:text="@string/buttonDivide"
+                style="@style/BtnStyle1"/>
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonPoint"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="putToEditTextNumber"
                 android:text="@string/buttonPoint"
-                android:textSize="@dimen/textSizeHorizontal" />
+                style="@style/BtnStyle1"/>
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonEqual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="4"
-                android:layout_marginStart="@dimen/marginStartBtn"
                 android:onClick="getResult"
                 android:text="@string/buttonEqual"
-                android:textSize="@dimen/textSizeHorizontal" />
+                style="@style/BtnStyle1" />
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

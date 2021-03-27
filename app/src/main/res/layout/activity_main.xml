@@ -4,24 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@mipmap/shops"
     tools:context=".MainActivity">
 
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switchTheme"
+        app:layout_constraintBottom_toTopOf="@+id/calculatorEditText"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintVertical_bias="0.05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="switchTheme"/>
 
     <EditText
         android:id="@+id/calculatorEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/editTextMarginStart"
+        android:layout_marginTop="@dimen/editTextMarginTop"
+        android:layout_marginBottom="@dimen/editTextMarginBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/cardview_light_background"
         android:inputType="number"
         android:labelFor="@id/calculatorEditText"
-        android:textSize="50sp"
+        android:textSize="@dimen/editTextTextSize"
         android:hint="@string/hintForCalcEditText"
         />
 

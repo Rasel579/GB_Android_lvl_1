@@ -2,5 +2,12 @@
 <resources>
     <dimen name="textSize">60sp</dimen>
     <dimen name="textSizeHorizontal">20sp</dimen>
-    <dimen name="marginStartBtn">5dp</dimen>
+    <dimen name="marginStartBtn">9dp</dimen>
+    <dimen name="editTextMarginLeftAndRight">5dp</dimen>
+    <dimen name="editTextTextSize">50sp</dimen>
+    <dimen name="tableMarginLeftAndRight">5dp</dimen>
+    <dimen name="tableMarginBottom">20dp</dimen>
+    <dimen name="editTextMarginStart">5dp</dimen>
+    <dimen name="editTextMarginTop">100dp</dimen>
+    <dimen name="editTextMarginBottom">10dp</dimen>
 </resources>

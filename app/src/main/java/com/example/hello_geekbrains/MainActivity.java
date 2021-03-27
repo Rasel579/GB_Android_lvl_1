@@ -5,26 +5,58 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Switch;
 
 import com.example.hello_geekbrains.bussines_logic.ArithmeticLogic;
 
 public class MainActivity extends AppCompatActivity {
     private EditText editText;
+    private  Switch switcherTheme;
+
     private final static String KeyArithmeticLogic = "ArithmeticLogic";
     private ArithmeticLogic arithmeticLogic;
+    private final static String NameSharedPreference = "Login";
+    private final static String AppTheme = "Theme.Hello_GeekBrains";
+    private final static int Hello_GeekBrainsStyle = 0;
+    private final static int DarkTheme = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(getTheme(R.style.Theme_Hello_GeekBrains));
         setContentView(R.layout.activity_main);
         arithmeticLogic = new ArithmeticLogic();
         editText = findViewById(R.id.calculatorEditText);
+        switcherTheme = findViewById(R.id.switch1);
+    }
+
+    private int getTheme(int themeStyle) {
+        return switchStileThemeById(getStyleTheme(themeStyle));
+    }
+
+
+
+    private int getStyleTheme(int themeStyle) {
+        SharedPreferences sharedPreferences = getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
+        return sharedPreferences.getInt(AppTheme, themeStyle);
+    }
+
+    private int switchStileThemeById(int styleTheme) {
+        switch (styleTheme){
+            case  DarkTheme:
+                return R.style.DarkTheme;
+            default:
+                return R.style.Theme_Hello_GeekBrains;
+        }
     }
 
 
@@ -100,5 +132,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         arithmeticLogic = savedInstanceState.getParcelable(KeyArithmeticLogic);
+    }
+
+    public void switchTheme(View view) {
+        if (switcherTheme.isChecked()){
+            setAppTheme(DarkTheme);
+        } else setAppTheme(Hello_GeekBrainsStyle);
+        recreate();
+    }
+
+    private void setAppTheme(int darkTheme) {
+        SharedPreferences sharedPreferences = getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(AppTheme, darkTheme);
+        editor.apply();
     }
 }
