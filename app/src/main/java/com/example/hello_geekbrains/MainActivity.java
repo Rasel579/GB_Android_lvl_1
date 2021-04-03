@@ -5,6 +5,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Build;
@@ -19,45 +20,30 @@ import com.example.hello_geekbrains.bussines_logic.ArithmeticLogic;
 
 public class MainActivity extends AppCompatActivity {
     private EditText editText;
-    private  Switch switcherTheme;
+    private Button goToSettings;
+
 
     private final static String KeyArithmeticLogic = "ArithmeticLogic";
     private ArithmeticLogic arithmeticLogic;
-    private final static String NameSharedPreference = "Login";
     private final static String AppTheme = "Theme.Hello_GeekBrains";
-    private final static int Hello_GeekBrainsStyle = 0;
-    private final static int DarkTheme = 1;
+
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(getTheme(R.style.Theme_Hello_GeekBrains));
+        if (getIntent().getExtras() != null){
+            int themeStyle = getIntent().getExtras().getInt(AppTheme);
+            setTheme(themeStyle);
+        }
         setContentView(R.layout.activity_main);
         arithmeticLogic = new ArithmeticLogic();
         editText = findViewById(R.id.calculatorEditText);
-        switcherTheme = findViewById(R.id.switch1);
-    }
 
-    private int getTheme(int themeStyle) {
-        return switchStileThemeById(getStyleTheme(themeStyle));
     }
 
 
-
-    private int getStyleTheme(int themeStyle) {
-        SharedPreferences sharedPreferences = getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
-        return sharedPreferences.getInt(AppTheme, themeStyle);
-    }
-
-    private int switchStileThemeById(int styleTheme) {
-        switch (styleTheme){
-            case  DarkTheme:
-                return R.style.DarkTheme;
-            default:
-                return R.style.Theme_Hello_GeekBrains;
-        }
-    }
 
 
     //Добавляем на экран через determineView в editText введенные пользователем данные
@@ -134,17 +120,9 @@ public class MainActivity extends AppCompatActivity {
         arithmeticLogic = savedInstanceState.getParcelable(KeyArithmeticLogic);
     }
 
-    public void switchTheme(View view) {
-        if (switcherTheme.isChecked()){
-            setAppTheme(DarkTheme);
-        } else setAppTheme(Hello_GeekBrainsStyle);
-        recreate();
+    public void goToSettings(View view){
+        Intent runSettings = new Intent(MainActivity.this, SettingActivity.class);
+        startActivity(runSettings);
     }
 
-    private void setAppTheme(int darkTheme) {
-        SharedPreferences sharedPreferences = getSharedPreferences(NameSharedPreference, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt(AppTheme, darkTheme);
-        editor.apply();
-    }
 }

@@ -62,25 +62,39 @@ public class ArithmeticLogic implements Parcelable {
 
     private void calculateResult(ArrayList<String> contentNumberAndArithmeticSigns) {
       contentNumberAndArithmeticSigns.add(stringContainNumber);
-      if(contentNumberAndArithmeticSigns.contains("+") && contentNumberAndArithmeticSigns.size() == 3 && !contentNumberAndArithmeticSigns.get(0).equals("") && !contentNumberAndArithmeticSigns.get(2).equals("")){
-          result = sum(contentNumberAndArithmeticSigns);
-          setResult(String.valueOf(result));
+        if (!isOperationPossible(contentNumberAndArithmeticSigns)) {
+            return;
+        }
+          String[] operations = {"+", "-", "/", "*"};
+        for (String operation : operations) {
+            if (isOperation(operation)){
+                switch (operation){
+                        case "+":
+                              result = sum(contentNumberAndArithmeticSigns);
+                              break;
+                              case "-":
+                                 result = difference(contentNumberAndArithmeticSigns);
+                                 break;
+                                 case "*":
+                                   result = subtract(contentNumberAndArithmeticSigns);
+                                   break;
+                             case  "/":
+                                   result = divide(contentNumberAndArithmeticSigns);
+                                   break;
+                }
+                setResult(String.valueOf(result));
+                return;
+            }
+        }
 
-      }
-      if(contentNumberAndArithmeticSigns.contains("-") && contentNumberAndArithmeticSigns.size() == 3 && !contentNumberAndArithmeticSigns.get(0).equals("") && !contentNumberAndArithmeticSigns.get(2).equals("")){
-          result = difference(contentNumberAndArithmeticSigns);
-          setResult(String.valueOf(result));
-      }
+    }
 
-      if(contentNumberAndArithmeticSigns.contains("*") && contentNumberAndArithmeticSigns.size() == 3 && !contentNumberAndArithmeticSigns.get(0).equals("") && !contentNumberAndArithmeticSigns.get(2).equals("")){
-          result = subtract(contentNumberAndArithmeticSigns);
-          setResult(String.valueOf(result));
-      }
+    private boolean isOperationPossible(ArrayList<String> arrayList){
+        return arrayList.size() == 3 && !arrayList.get(0).equals("") && !arrayList.get(2).equals("");
+    }
 
-      if(contentNumberAndArithmeticSigns.contains("/") && contentNumberAndArithmeticSigns.size() == 3 && !contentNumberAndArithmeticSigns.get(0).equals("") && !contentNumberAndArithmeticSigns.get(2).equals("")){
-          result = divide(contentNumberAndArithmeticSigns);
-          setResult(String.valueOf(result));
-      }
+    private  boolean isOperation(String operation){
+        return  contentNumberAndArithmeticSigns.contains(operation);
     }
 
 

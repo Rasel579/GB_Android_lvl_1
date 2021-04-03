@@ -19,4 +19,7 @@
     <string name="buttonEqual">=</string>
     <string name="buttonPoint">.</string>
     <string name="switchTheme">Переключить Тему</string>
+    <string name="settings_for_calculator">Настройки</string>
+    <string name="settings">Настройки</string>
+    <string name="BackBtn">Назад</string>
 </resources>
