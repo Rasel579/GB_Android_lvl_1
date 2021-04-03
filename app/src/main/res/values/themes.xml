@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Hello_GeekBrains" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">#73b5c9</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -12,5 +12,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+    <style name="DarkTheme"
+        parent="Theme.MaterialComponents">
+        <item name="backgroundTint">@color/material_on_surface_emphasis_medium</item>
+        <item name="buttonTint">@color/colorAccent</item>
+        <item name="colorPrimary">@color/design_default_color_surface</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/cardview_light_background</item>
+        <item name="layout_constraintVertical_bias">0.01</item>
+        <item name="fontFamily">sans-serif-condensed-light</item>
     </style>
 </resources>

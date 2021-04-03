@@ -4,50 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@mipmap/shops"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/settings"
-        app:layout_constraintBottom_toTopOf="@+id/calculatorEditText"
-        app:layout_constraintHorizontal_bias="0.95"
-        app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="goToSettings"/>
 
     <EditText
         android:id="@+id/calculatorEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="@dimen/editTextMarginStart"
-        android:layout_marginTop="@dimen/editTextMarginTop"
+        android:layout_marginStart="@dimen/editTextMarginLeftAndRight"
+        android:layout_marginTop="@dimen/editTextMarginLeftAndRight"
         android:layout_marginBottom="@dimen/editTextMarginBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/material_on_surface_emphasis_medium"
         android:inputType="number"
         android:labelFor="@id/calculatorEditText"
         android:textSize="@dimen/editTextTextSize"
         android:hint="@string/hintForCalcEditText"
-        android:textDirection="anyRtl"
         />
 
     <include
         layout="@layout/calc_keyboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="@dimen/tableMarginLeftAndRight"
+        android:layout_marginStart="@dimen/tableMarginLeftAndRight"
+        android:layout_marginBottom="@dimen/tableMarginBottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculatorEditText"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

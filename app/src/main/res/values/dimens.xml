@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize">60sp</dimen>
+    <dimen name="textSizeHorizontal">20sp</dimen>
+    <dimen name="marginStartBtn">9dp</dimen>
+    <dimen name="editTextMarginLeftAndRight">5dp</dimen>
+    <dimen name="editTextTextSize">30sp</dimen>
+    <dimen name="tableMarginLeftAndRight">5dp</dimen>
+    <dimen name="tableMarginBottom">20dp</dimen>
+    <dimen name="editTextMarginStart">5dp</dimen>
+    <dimen name="editTextMarginTop">100dp</dimen>
+    <dimen name="editTextMarginBottom">10dp</dimen>
+    <dimen name="switcherTextSize">40sp</dimen>
+    <dimen name="marginTextField">20dp</dimen>
+    <dimen name="switcherMarginTop">144dp</dimen>
+    <dimen name="textSizeBtnBack">30sp</dimen>
+</resources>
